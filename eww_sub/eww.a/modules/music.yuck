@@ -1,0 +1,76 @@
+(defwidget osu-music-module []
+  (eventbox
+    :onscroll "echo $(echo {} | sed -e 's/down/-/g' -e 's/up/+/g' | xargs -I% wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.03%) && scripts/volume osd"
+    :onclick "scripts/toggle-music.sh &"
+    :onmiddleclick "playerctl play-pause"
+    :onrightclick "playerctl next || playerctl position `bc <<< \"100 * $(playerctl metadata mpris:length) / 1000000 / 100\"`"
+    :onhover "${EWW_CMD} update music_hover=true"
+    :onhoverlost "${EWW_CMD} update music_hover=false"
+    (box
+      :space-evenly false
+      :class "module-button module-button-${music_hover || music_open}"
+      (revealer ; dummy keep alive
+        :reveal false
+        :duration "0ms"
+        :transition "slideright"
+        (label :text {mcover.image})
+      )
+      (box
+        :space-evenly false
+        :valign "start"
+        :class "osu-music-box"
+        (image
+          :path "images/svg/beatmaps.svg"
+          :image-width 33
+          :image-height 33
+          :class "osu-music-box-dummy"
+        )
+        (scale
+          :orientation "v"
+          :flipped "true"
+          :class "osu-music-slider"
+          :value "${volume.percent}"
+          :tooltip "volume on ${volume.percent}%"
+          :onchange "scripts/volume setvol SINK {}"
+        )
+      )
+      (revealer
+        :transition "slideright"
+        :reveal "${(music_reveal || osd_vol || (mname.title != '')) && !focus}"
+        :duration "300ms"
+        :class "music-ctl-revealer"
+        :onscroll "echo $(echo {} | sed -e 's/down/-/g' -e 's/up/+/g' | xargs -I% wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.03%) && scripts/volume osd"
+        :limit-width 20
+        (eventbox
+          :class "music-ctl-revealer"
+          :onscroll "echo $(echo {} | sed -e 's/down/-/g' -e 's/up/+/g' | xargs -I% wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.03%) && scripts/volume osd"
+          (box
+            :space-evenly false
+            :class "music-ctl-revealer"
+            :orientation "v"
+            :valign "center"
+            (label
+              :class "music-title-bar"
+              :limit-width 50
+              :xalign 0
+              :style "font-size: 15pt; font-family: 'Torus';" ;color: ${mcover.color.colors.color7};
+              :text "${mname.title == '' ? 'Not playing' : mname.title}"
+            )
+            (revealer
+              :transition "slidedown"
+              :reveal "${mname.artist != ''}"
+              :duration "20ms"
+              (label
+                :class "music-artist-bar"
+                :limit-width 50
+                :xalign 0
+                :style "font-size: 11pt; font-family: 'Torus';"
+                :text "${mname.artist}"
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)

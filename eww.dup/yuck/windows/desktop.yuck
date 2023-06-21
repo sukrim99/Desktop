@@ -1,0 +1,47 @@
+(defwidget desktop_clock [] (box
+    :class "clock"
+    :space-evenly false
+    :orientation "v"
+    :valign "end"  ;; Mengubah valign menjadi "end"
+    :halign "end"  ;; Mengubah halign menjadi "end"
+
+    (label :class "date" :text date)
+    (box
+        :space-evenly false
+        :class "time"
+        (label :class "hour" :text hour)
+        (label :class "separator" :text ":")
+        (label :class "minutes" :text minutes)
+    )
+   
+))
+
+(defvar desktop_reveal true)
+(defwidget desktop [] (box
+    :class "desktop"
+    ;;:style "background-image: url('$HOME/')"
+    :style "background-image: url('${EWW_CONFIG_DIR}/assets/wallpapers/uwp3788216_2.png')"
+    ;;(desktop_clock)
+    (eventbox
+        :onhoverlost "${EWW_CMD} update desktop_reveal=true"
+        :onhover "${EWW_CMD} update desktop_reveal=true"
+        :halign "end"
+        :valign "end"
+         (box
+             :orientation "v" 
+             (desktop_clock)
+             (revealer
+                 :reveal desktop_reveal
+                ;; :transition "slidedown"
+                ;; :duration 300
+                 (box
+                     :class "system"
+                     (sysprogress_cpu)
+                     (sysprogress_ram)
+                     (sysprogress_temp)
+                     (sysprogress_bat)
+                 )
+             )
+         )
+     )
+))

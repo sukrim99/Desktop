@@ -1,0 +1,17 @@
+[Default Applications]
+image/jpeg=org.xfce.ristretto.desktop
+image/png=org.xfce.ristretto.desktop
+image/svg+xml=org.inkscape.Inkscape.desktop
+x-scheme-handler/evernote=evernote-client.desktop
+x-scheme-handler/en=evernote-client.desktop
+x-scheme-handler/figma=figma-linux.desktop
+x-scheme-handler/notion=notion-app.desktop
+text/x-python=codium.desktop
+application/pdf=mupdf.desktop
+
+[Added Associations]
+image/jpeg=org.xfce.ristretto.desktop;
+image/png=org.xfce.ristretto.desktop;
+image/svg+xml=org.inkscape.Inkscape.desktop;
+text/x-python=userapp-nvim-YR0E41.desktop;nvim.desktop;codium.desktop;
+application/pdf=mupdf.desktop;

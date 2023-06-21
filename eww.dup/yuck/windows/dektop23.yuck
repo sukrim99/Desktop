@@ -1,0 +1,52 @@
+(defwidget desktop_clock [] (box
+  :class "clock"
+  :space-evenly false
+  :orientation "v"
+  :valign "end"
+  :halign "end"
+
+  (label :class "date" :text date)
+  (box
+      :space-evenly false
+      :class "time"
+      (label :class "hour" :text hour)
+      (label :class "separator" :text ":")
+      (label :class "minutes" :text minutes)
+  )
+))
+
+(defvar desktop_reveal true)
+
+(defwidget desktop [] (box
+  :class "desktop"
+  :style "background-image: url('${EWW_CONFIG_DIR}/assets/wallpapers/Endy_vector_satelliet.png')"
+  (eventbox
+      :onhoverlost "${EWW_CMD} update desktop_reveal=false"
+      :onhover "${EWW_CMD} update desktop_reveal=true"
+      :halign "center"  ;; Mengubah halign menjadi "right"
+      :valign "center"  ;; Mengubah valign menjadi "top"
+      (box
+          :orientation "v"
+          (box
+              :halign "right"  ;; Mengubah halign menjadi "right"
+              (desktop_clock)
+          )
+      )
+  )
+  (eventbox
+      :halign "center"  ;; Mengubah halign menjadi "right"
+      :valign "center"  ;; Mengubah valign menjadi "top"
+      (revealer
+          :reveal desktop_reveal
+          :transition "slidedown"
+          :duration 300
+          (box
+              :class "system"
+              (sysprogress_cpu)
+              (sysprogress_ram)
+              (sysprogress_temp)
+              (sysprogress_bat)
+          )
+      )
+  )
+))

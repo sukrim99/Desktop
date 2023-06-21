@@ -1,0 +1,11 @@
+
+[alsa]
+mixer-element=Master
+pcm=pipewire
+
+[audqt]
+theme=dark
+
+[qtui]
+player_height=512
+player_width=470

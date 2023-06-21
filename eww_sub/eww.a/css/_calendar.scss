@@ -1,0 +1,44 @@
+.calendar-win {
+  @include window;
+  background-color: $colorbarbg;
+  border: 3px solid $color3;
+  border-radius: 15px;
+  color: $colortext;
+  padding: .2em;
+  font-family: 'Torus';
+  margin: 14px;
+}
+
+calendar {
+  * {
+    padding-top: 10px;
+    color: $primary;
+  }
+
+  :selected {
+    color: $onPrimary;
+    font-weight: bolder;
+    background-color: $primary;
+    border-radius: 8px;
+  }
+
+  .header {
+    color: $colortext;
+    margin: 15px;
+    min-height: 400px;
+  }
+
+  .highlight {
+    color: $onTertiaryContainer;
+    font-weight: bold;
+  }
+
+  .button {
+    color: $colortext;
+    padding-top: 10px;
+  }
+
+  :indeterminate {
+    color: $onBackground;
+  }
+}
