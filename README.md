@@ -12,6 +12,16 @@ composed of :
 - [Alalcritty](https://alacritty.org/)   == Terminal
 - [Neovim](https://neovim.io/)     == Main IDE
 
+##### Image
+
+
+<img src="https://github.com/sukrim99/Desktop/blob/main/desktop1.png">
+
+
+<img src="https://github.com/sukrim99/Desktop/blob/main/desktop2.png">
+
+
+
 #### **DEPEDENCIES**
 
 install dependencies, e.g on Arch
@@ -23,8 +33,6 @@ yay -S hyprland eww-wayland ttf-ubuntu-nerd socat jq acpi inotify-tools\
   wl-gammactl wlsunset wl-clipboard hyprpicker hyprshot blueberry \
   polkit-gnome
 ```
-
-
 
 #### INSTALL
 
