@@ -1,6 +1,6 @@
 (defvar osd "{ \"icon\": \"󰕾\", \"value\": 0 }")
 (defwidget osd [] (eventbox
-    :onclick "${EWW_CONFIG_DIR}/scripts/osd close"
+    :onclick "./scripts/osd close"
     (box :class "osd-widget"
         (overlay
             (progress

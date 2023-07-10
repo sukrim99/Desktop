@@ -21,7 +21,7 @@
         }
         &.network{
             &.none, &.low{ color: $red; }
-            &.medium{}
+            &.medium{ color: $fg_color; }
             &.high{ color: $blue; }
         }
         &.bluetooth, &.bt_speaker{

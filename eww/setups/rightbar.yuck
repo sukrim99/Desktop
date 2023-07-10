@@ -34,7 +34,7 @@
                         :height "120%"
                         :anchor "center center")
     (eventbox
-        :onclick "${EWW_CONFIG_DIR}/scripts/launcher toggle_menu powermenu"
+        :onclick "./scripts/launcher toggle_menu powermenu"
         (powermenu)))
 
 (defwindow calendar
@@ -45,7 +45,7 @@
                         :height "100%"
                         :anchor "center left")
     (eventbox
-        :onclick "${EWW_CONFIG_DIR}/scripts/launcher toggle_menu calendar"
+        :onclick "./scripts/launcher toggle_menu calendar"
     (datemenu :valign "center" :halign "start")))
 
 (defwindow media
@@ -60,7 +60,7 @@
         (media :valign "center" :halign "start")
         (eventbox
             :hexpand true
-            :onclick "${EWW_CONFIG_DIR}/scripts/launcher toggle_menu media")
+            :onclick "./scripts/launcher toggle_menu media")
     ))
 
 (defwindow quicksettings
@@ -75,7 +75,7 @@
         (notifications_center :valign "fill" :halign "start")
         (eventbox
             :hexpand true
-            :onclick "${EWW_CONFIG_DIR}/scripts/launcher toggle_menu quicksettings")
+            :onclick "./scripts/launcher toggle_menu quicksettings")
     ))
 
 (defwindow dock
@@ -106,6 +106,6 @@
                         :anchor "center center")
     (box
         (eventbox
-            :onclick "${EWW_CONFIG_DIR}/scripts/launcher toggle_menu app_launcher"
+            :onclick "./scripts/launcher toggle_menu app_launcher"
             (app_launcher :valign "center" :halign "center"))
     ))

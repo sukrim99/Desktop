@@ -1,0 +1,9 @@
+2023/07/07-21:05:06.876 7f0 Reusing MANIFEST /home/n-09/.config/Youtube/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/07/07-21:05:06.877 7f0 Recovering log #22
+2023/07/07-21:05:06.877 7f0 Reusing old log /home/n-09/.config/Youtube/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000022.log 
+2023/07/07-21:05:07.474 7f1 Compacting 1@1 + 1@2 files
+2023/07/07-21:05:07.478 7f1 Generated table #25@1: 380 keys, 48732 bytes
+2023/07/07-21:05:07.478 7f1 Compacted 1@1 + 1@2 files => 48732 bytes
+2023/07/07-21:05:07.480 7f1 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/07/07-21:05:07.480 7f1 Delete type=2 #20
+2023/07/07-21:05:07.480 7f1 Delete type=2 #23

@@ -1,8 +1,8 @@
 
     window:
       padding:
-        x: 38
-        y: 38
+        x: 30
+        y: 30
       opacity: 1.0
 
     scrolling:
@@ -23,7 +23,7 @@
     colors:
 
        primary:
-        background: '#24283b'
+        background: '#292e42'
         foreground: '#c0caf5'
        normal:
          black: '#414868'

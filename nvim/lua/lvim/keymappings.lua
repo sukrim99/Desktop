@@ -23,6 +23,28 @@ local mode_adapters = {
   operator_pending_mode = "o",
 }
 
+-- yang di ubah
+
+-- lvim.keys.normal_mode["a"] = "<Left>" -- move kiri
+-- lvim.keys.normal_mode["d"] = "<Right>" -- move kanan
+-- lvim.keys.normal_mode["s"] = "<Down>" --move bawah
+-- lvim.keys.normal_mode["w"] = "<Up>" -- move atas
+-- lvim.keys.normal_mode["r"] = [[:%s/\<<C-r><C-w>\>//g<Left><Left>]] --find and repleace satu kata di satu file
+-- lvim.keys.normal_mode["t"] = "ciw" -- mereneme kata yang di select saja
+-- lvim.keys.visual_mode["fr"] = "cgn" -- merubah kata di semua file melalui ranger
+-- 
+-- -- CTRL Keybind
+-- lvim.keys.normal_mode["<C-d>"] = "dd" -- menghapus satu baris
+-- lvim.keys.normal_mode["<C-x>"] = "d" -- cut satu baris
+-- lvim.keys.normal_mode["<C-a>"] = "<Cmd>normal! ggVG<CR>" --selectt all
+-- lvim.keys.normal_mode["<C-c>"] = ':normal! "0y<CR>' --copy satu baris
+-- --
+-- 
+-- lvim.keys.visual_mode["<S-Right>"] = "<Right>"
+-- lvim.keys.visual_mode["<S-Left>"] = "<Left>"
+-- lvim.keys.visual_mode["<S-Up>"] = "<Up>"
+-- lvim.keys.visual_mode["<S-Down>"] = "<Down>"
+-- 
 ---@class Keys
 ---@field insert_mode table
 ---@field normal_mode table

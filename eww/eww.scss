@@ -27,4 +27,6 @@
 @import "./scss/windows/noti_center.scss";
 @import "./scss/windows/media.scss";
 @import "./scss/windows/app_laucher.scss";
-tooltip{ @include tooltip }
+tooltip {
+  @include tooltip;
+}

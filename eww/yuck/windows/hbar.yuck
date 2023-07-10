@@ -1,6 +1,6 @@
 (defwidget panel_clock [] (box :class "button-bin"
     (button
-        :onclick "${EWW_CONFIG_DIR}/scripts/launcher toggle_menu calendar"
+        :onclick "./scripts/launcher toggle_menu calendar"
         :class "button clock"
         (label  :text panel_clock)
     )
@@ -9,8 +9,8 @@
 (defwidget panel_media [] (box :class "button-bin" 
     :visible {media.preferred != "null"}
     (eventbox
-        :onclick "${EWW_CONFIG_DIR}/scripts/player ${media.preferred.name} play-pause"
-        :onscroll "${EWW_CONFIG_DIR}/scripts/player ${media.preferred.name} {}"
+        :onclick "./scripts/player ${media.preferred.name} play-pause"
+        :onscroll "./scripts/player ${media.preferred.name} {}"
         :class "button media"
         (box
             :space-evenly false
@@ -27,13 +27,13 @@
         :space-evenly false
         (panel_launcher)
         ;;(panel_clock)
-        (panel_workspaces :orientation "h")
         (panel_window :angle 0)
     )
     (box
         :class "centerBar"
-        (panel_media)
-        (panel_clock)
+        ;; (panel_media)
+        (panel_workspaces :orientation "h")
+
     )
     (box
         :class "righBar"
@@ -41,6 +41,7 @@
         :halign "end"
         (panel_colorpicker)
         (panel_system_indicators :orientation "h")
+        (panel_clock)
         (panel_powermenu)
     )
 ))

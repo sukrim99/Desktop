@@ -1,0 +1,6 @@
+2023/07/07-22:05:32.582 3961 Reusing MANIFEST /home/n-09/.config/Youtube/Local Storage/leveldb/MANIFEST-000001
+2023/07/07-22:05:32.582 3961 Recovering log #3
+2023/07/07-22:05:32.582 3961 Reusing old log /home/n-09/.config/Youtube/Local Storage/leveldb/000003.log 
+2023/07/07-23:34:35.995 3963 Level-0 table #5: started
+2023/07/07-23:34:35.996 3963 Level-0 table #5: 16546 bytes OK
+2023/07/07-23:34:35.998 3963 Delete type=0 #3
