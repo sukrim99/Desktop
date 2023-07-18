@@ -3,7 +3,7 @@
       padding:
         x: 30
         y: 30
-      opacity: 1.0
+      opacity: 0.98
 
     scrolling:
       history: 100
@@ -19,11 +19,33 @@
 
       size: 10.0
 
-
+   #  colors:
+   # 
+   #    primary:
+   #     background: '#2E3440'
+   #     foreground: '#D8DEE9'
+   #    normal:
+   #      black: '#3B4252'
+   #      red: '#BF616A'
+   #      green: '#A3BE8C'
+   #      yellow: '#EBCB8B'
+   #      blue: '#81A1C1'
+   #      magenta: '#B48EAD'
+   #      cyan: '#88C0D0'
+   #      white: '#D8DEE9'
+   #    bright:
+   #     black: '#4C566A'
+   #     red: '#BF616A'
+   #     green: '#A3BE8C'
+   #     yellow: '#EBCB8B'
+   #     blue: '#81A1C1'
+   #     magenta: '#B48EAD'
+   #     cyan: '#8FBCBB'
+   #     white: '#D8DEE9'
     colors:
 
        primary:
-        background: '#292e42'
+        background: '#2e3440'
         foreground: '#c0caf5'
        normal:
          black: '#414868'
@@ -243,7 +265,7 @@
         #
         # Values for `shape`:
         #   - ▇ Block
-        #   - _ Underline
+        #   - _ Beam
         #   - | Beam
         #shape: Block
 
@@ -740,9 +762,9 @@
       #   - ▇ Block
       #   - _ Underline
       #   - | Beam
-      style: 'Underline'
+      style: 'Beam'
 
-      vi_mode_style: 'Underline'
+      vi_mode_style: 'Beam'
       # Log level
       #
       # Values for `log_level`:
